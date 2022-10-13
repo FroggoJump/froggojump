@@ -7,8 +7,8 @@ public class Tile : MonoBehaviour
 {
     public float tileLength=30;
     private Transform next;
-
-
+    
+  
     public Transform lastElement;
 
     public Transform Next { get { 
