@@ -154,7 +154,7 @@ PlayerSettings:
   targetPixelDensity: 780
   resolutionScalingMode: 1
   resetResolutionOnWindowResize: 0
-  androidSupportedAspectRatio: 0
+  androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.DefaultCompany.FroggoJump

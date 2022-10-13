@@ -39,7 +39,7 @@ public class GameStats : MonoBehaviour
 
     private float actualSpeed;
     private int virtualLevel=1;
-    private int level;
+    private int level=1;
     private float actualDistance;
     private Vector3 relativeMove;
 
