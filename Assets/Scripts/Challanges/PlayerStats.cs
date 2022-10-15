@@ -49,6 +49,5 @@ public class PlayerStats : MonoBehaviour
 
     void WriteResults()
     {
-        Debug.Log(jumpAmount);
     }
 }

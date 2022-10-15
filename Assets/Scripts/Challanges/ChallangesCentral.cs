@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.Mathematics;
+using System;
 
 public class ChallangesCentral : MonoBehaviour
 {
@@ -11,13 +13,37 @@ public class ChallangesCentral : MonoBehaviour
 
 	private void Awake()
 	{
-        challanges = GetComponentsInChildren<Challange>();
+		challanges = GetComponentsInChildren<Challange>();
 		LoadGame();
 		UpdateCanvas();
 	}
-  
+	private void OnEnable()
+	{
+		TimeManager.NextDay += NextChallanges;
+		TimeManager.CurrentDay += KeepWaiting;
+	}
+	private void OnDisable()
+	{
+		TimeManager.NextDay -= NextChallanges;
+		TimeManager.CurrentDay -= KeepWaiting;
+	}
 
-	public void SaveGame()
+	public void NextChallanges()
+	{
+		print("It's next day");
+        UIController.instance.timeLeftChallenges.gameObject.SetActive(false);
+
+    }
+    public void KeepWaiting(double seconds)
+	{
+        double secondsLeft = seconds;
+        double hours = Math.Floor(secondsLeft / 3600);
+        secondsLeft = secondsLeft % 3600; 
+        double mins = Math.Floor(secondsLeft / 60);
+		UIController.instance.timeLeftChallenges.text = $"{hours} hours ";
+		UIController.instance.timeLeftChallenges.gameObject.SetActive(true);
+    }
+    public void SaveGame()
 	{
 		foreach(Challange challange in challanges)
         {
