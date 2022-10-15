@@ -10,7 +10,12 @@ public class JumpInOneGame : Challange
     {
         
             FrogController.OnFroggoJump += Validate;
-        
+
+    }
+    private void Start()
+    {
+        quest = UIController.instance.slotQuest_2;
+
     }
     private void OnDisable()
     {

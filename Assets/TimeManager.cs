@@ -7,17 +7,19 @@ using Newtonsoft.Json;
 
 public class TimeManager : MonoBehaviour
 {
+    public static TimeManager instance;
 
+    private void Awake()
+    {
+        instance = this;
+    }
     public static Action NextDay ;
     public static Action<double> CurrentDay ;
     DateTime currentTime;
 
-    void Start()
-    {
-        CompareTime();
-    }
+   
 
-    void CompareTime()
+    public void CompareTime()
     {
         currentTime = DateTime.Now;
 
@@ -44,7 +46,7 @@ public class TimeManager : MonoBehaviour
         else
         {
             var seconds = (currentTime - lastSavedTime).TotalSeconds;
-            double secondsLeft = (23*3600) - seconds;
+            double secondsLeft = (23* 3600) - seconds;
             CurrentDay?.Invoke(secondsLeft);
         }
     }

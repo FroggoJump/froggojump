@@ -9,6 +9,12 @@ public class PointsInOneGame : Challange
     private void OnEnable()
     {
             FrogController.OnFroggoLand += Validate;
+
+    }
+    private void Start()
+    {
+        quest = UIController.instance.slotQuest_3;
+
     }
     private void OnDisable()
     {

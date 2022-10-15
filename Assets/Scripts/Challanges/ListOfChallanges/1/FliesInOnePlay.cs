@@ -10,6 +10,10 @@ public class FliesInOnePlay : Challange
     {
         
             FlyPoints.OnFlySquashed += Validate;
+    }
+    private void Start()
+    {
+        quest = UIController.instance.slotQuest_1;
 
     }
     private void OnDisable()
