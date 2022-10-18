@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04de6bf14ca2a5846b09844092b4b099, type: 3}
   m_Name: JumpInOnePlay 1
   m_EditorClassIdentifier: 
-  challangeName: Jump like a frog!
-  description: Jump 30 times in one game
-  reward: 30
+  challangeName: Jump is fun
+  description: Jump 60 times in one game
+  reward: 100
   id: 5
   idQuest: 3234

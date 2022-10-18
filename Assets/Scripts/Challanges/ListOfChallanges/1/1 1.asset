@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04de6bf14ca2a5846b09844092b4b099, type: 3}
   m_Name: 1 1
   m_EditorClassIdentifier: 
-  challangeName: Frog  is hungry
-  description: Eat 6  flies in one game
-  reward: 100
+  challangeName: Frog want candy
+  description: Eat 10  flies in one game
+  reward: 130
   id: 4
   idQuest: Quest4

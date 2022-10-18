@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04de6bf14ca2a5846b09844092b4b099, type: 3}
   m_Name: 3 1
   m_EditorClassIdentifier: 
-  challangeName: Never lose hope!
-  description: Get 10000 points
+  challangeName: Feel the force
+  description: Get 50000 points
   reward: 50
   id: 6
   idQuest: 2356662
